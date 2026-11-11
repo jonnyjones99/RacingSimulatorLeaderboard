@@ -1,0 +1,48 @@
+/* Operator page: phone first, big touch targets. */
+.control {
+  --line: rgba(255, 255, 255, 0.16);
+  --pink: #e6007e;
+  --orange: #f7931e;
+  --ok: #2be37a;
+  --bad: #ff3b4e;
+  max-width: 520px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  color: #fff;
+}
+.control header { display: flex; gap: 14px; align-items: baseline; }
+.control header h1 { margin-right: auto; }
+.control h1 { margin: 0; font-size: 24px; font-style: italic; font-weight: 900; text-transform: uppercase; }
+.control a { color: #9fb4ff; font-size: 14px; }
+.control h2 { margin: 0 0 4px; font-size: 13px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #b9c0e6; }
+
+.panel { display: flex; flex-direction: column; gap: 10px; padding: 16px; background: #0f1330; border: 1px solid var(--line); }
+.control label { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #b9c0e6; margin-top: 6px; }
+.control input { width: 100%; min-width: 0; padding: 13px 12px; font: inherit; font-size: 18px; color: #fff; background: #1a1f4a; border: 1px solid var(--line); border-radius: 0; }
+.control input:focus-visible, .control button:focus-visible { outline: 2px solid #7bdcff; outline-offset: 2px; }
+.control .time-input { font-size: 26px; font-weight: 700; text-align: center; font-variant-numeric: tabular-nums; }
+
+.control button { padding: 13px 14px; font: inherit; font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; background: #1b2050; border: 1px solid var(--line); cursor: pointer; }
+.control button:disabled { opacity: 0.45; cursor: not-allowed; }
+.control button.primary { background: linear-gradient(90deg, var(--pink), var(--orange)); border-color: transparent; font-size: 16px; padding: 16px; }
+.control button.active { background: #fff; color: #0b0d1c; }
+.control button.link { padding: 0; font-size: 14px; font-weight: 400; letter-spacing: 0; text-transform: none; text-decoration: underline; color: #9fb4ff; background: none; border: 0; }
+.control button.danger { padding: 8px 10px; font-size: 12px; color: var(--bad); background: none; border-color: var(--bad); }
+
+.row-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.versus { display: grid; grid-template-columns: 1fr auto 1fr; gap: 8px; align-items: center; }
+
+.hint { margin: 0; font-size: 13px; color: #9aa3c7; }
+.error { margin: 0; font-size: 14px; font-weight: 700; color: var(--bad); }
+.ok { margin: 0; font-size: 14px; font-weight: 700; color: var(--ok); }
+.banner { margin: 0; padding: 10px 12px; font-size: 13px; background: #2a2f66; }
+.banner.bad { background: var(--bad); font-weight: 700; }
+
+.laps { list-style: none; margin: 0; padding: 0; }
+.laps li { display: grid; grid-template-columns: 1fr auto auto; gap: 12px; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+.laps span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.laps b { font-variant-numeric: tabular-nums; }
